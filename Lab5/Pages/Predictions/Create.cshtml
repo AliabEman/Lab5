@@ -1,0 +1,42 @@
+﻿@page
+@model Lab5.Pages.Predictions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Prediction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                @Html.RadioButtonFor(model => model.Prediction.Question, "Computer")
+                What will the computers look like in 20 years?
+                <br />
+                @Html.RadioButtonFor(model => model.Prediction.Question, "Earth")
+                What will the earth look like in 20 years?
+            </div>            
+            <div class="form-group">
+                <div class="btn btn-sm float-left">
+                    <input name="file" type="file">
+                </div>
+            </div>
+            <div class="form-group">
+                <button name="upload" value ="Create" class="btn btn-primary">Upload Now</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "storage1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/eman0011lab5",
+      "type": "storage.azure",
+      "connectionId": "ConnectionStrings:AzureBlobStorage",
+      "dynamicId": null
+    },
+    "mssql2": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/eman0011lab5/databases/eman0011lab5",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:AzureDBConnection",
+      "dynamicId": null
+    },
+    "sqlite1": {
+      "ignored": "True",
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:DefaultConnection1",
+      "dynamicId": null
+    }
+  }
+}
